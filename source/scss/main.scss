@@ -1,0 +1,137 @@
+@import "../libs/normalize";
+@import "mixins";
+@import "fonts";
+@import "variables";
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  padding: 3rem;
+  font-family: "LatoRegular", Tahoma, sans-serif;
+  font-size: var(--default-font-size);
+  line-height: 1.7;
+}
+
+.header {
+  position: relative;
+  height: 95vh;
+  background-image:
+  linear-gradient(to right bottom, var(--color-primary), var(--color-secondary)),
+  url(../images/background.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.header__logo {
+  height: 4rem;
+}
+
+.header__text-box {
+  @include absCenter;
+  text-align: center;
+}
+
+.heading-primary {
+  margin-bottom: 6rem;
+  color: var(--color-gray-light);
+
+  &--main,
+  &--sub {
+    display: block;
+  }
+
+  &--main {
+    font-family: "FauxHanamin", sans-serif;
+    font-size: 5.2rem;
+    font-weight: 700;
+    z-index: 999;
+  }
+
+  &--sub {
+    margin-top: 3rem;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 45px;
+    z-index: -1;
+    width: 170px;
+    height: 170px;
+    background-image: url(../images/blossom_1.png);
+    background-size: cover;
+    animation: bob 5s infinite;
+    animation-delay: 1.25s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: -80px;
+    top: -30px;
+    z-index: -1;
+    width: 180px;
+    height: 180px;
+    background-image: url(../images/blossom_2.png);
+    background-size: cover;
+    animation: bob 5s infinite;
+  }
+
+}
+
+@keyframes bob {
+  0% {
+      transform: translateY(0)
+  }
+
+  50% {
+      transform: translateY(10px);
+  }
+
+  to {
+      transform: translateY(0)
+  }
+}
+
+.btn {
+  &:link,
+  &:visited {
+    position: relative;
+    display: inline-block;
+    padding: 1.3rem 5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 10rem;
+    @include main-transition(.2s);
+  }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem var(--color-black);
+  }
+  &--tour {
+    color: var(--color-gray-light);
+    background-color: var(--color-pink);
+  }
+}
