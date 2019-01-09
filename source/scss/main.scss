@@ -2,6 +2,7 @@
 @import "mixins";
 @import "fonts";
 @import "variables";
+@import "grid";
 
 *,
 *::before,
@@ -30,21 +31,21 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-}
 
-.header__logo-box {
-  position: absolute;
-  top: 4rem;
-  left: 4rem;
-}
+  &__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+  }
 
-.header__logo {
-  height: 4rem;
-}
+  &__logo {
+    height: 4rem;
+  }
 
-.header__text-box {
-  @include absCenter;
-  text-align: center;
+  &__text-box {
+    @include absCenter;
+    text-align: center;
+  }
 }
 
 .heading-primary {
@@ -126,12 +127,31 @@ body {
     border-radius: 10rem;
     @include main-transition(.2s);
   }
+
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem var(--color-black);
+    box-shadow: 0 1rem 2rem var(--color-white);
   }
+
   &--tour {
     color: var(--color-gray-light);
     background-color: var(--color-pink);
   }
+}
+
+.about-tours {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.heading-secondary {
+  position: relative;
+  display: block;
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  background-clip: text;
 }
