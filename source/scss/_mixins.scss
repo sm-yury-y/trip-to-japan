@@ -14,7 +14,7 @@
 }
 
 @mixin main-transition($time) {
-  transition: all $time ease;
+  transition: all $time ease-out;
 }
 
 // media query manager
