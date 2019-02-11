@@ -26,6 +26,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
+  background-color: var(--color-pink-light);
   background-image:
   linear-gradient(to right bottom, var(--color-primary), var(--color-secondary)),
   url(../images/background.jpg);
@@ -80,7 +81,6 @@ body {
     font-size: 2rem;
     font-weight: 400;
     text-align: center;
-    text-transform: uppercase;
   }
 
   &::before {
@@ -134,7 +134,6 @@ body {
     padding: 1.3rem 5rem;
     font-size: 1.5rem;
     text-decoration: none;
-    text-transform: uppercase;
     border-radius: 0px 30px 30px;
     @include main-transition(.2s);
   }
@@ -159,18 +158,16 @@ body {
   display: block;
   margin-bottom: 8rem;
   font-size: 3.5rem;
-  text-transform: uppercase;
+  font-weight: normal;
   text-align: center;
   letter-spacing: 1px;
   color: var(--color-pink);
 }
 
 .heading-tertiary {
-  font-size: var(--default-font-size);
   font-family: 'LatoBold', Tahoma, serif;
-  text-transform: uppercase;
+  font-weight: normal;
   color: var(--color-pink);
-  margin: 0;
 }
 
 .paragraph {
@@ -213,4 +210,41 @@ body {
   &:hover &__photo:not(:hover) {
    transform:  scale(.5);
   }
+}
+
+.tour-offer {
+  position: relative;
+  top: 100px;
+  padding-top: 16rem;
+  background-color: var(--color-pink-light);
+  background-image:
+  linear-gradient(to right bottom, var(--color-primary), var(--color-secondary)), url(../images/town.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #F2F5F9;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    background-image: url(../images/decorate-bottom.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+.tour-offer-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  list-style: none;
+}
+.tour-offer-card {
+  width: 300px;
+  height: 410px;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  border-radius: 10px;
+  background-color: white;
 }
