@@ -152,6 +152,11 @@ body {
     color: var(--color-gray-light);
     background-color: var(--color-pink);
   }
+
+  &--white {
+    color: var(--color-gray);
+    background-color: var(--color-gray-light);
+  }
 }
 
 .about-tours {
@@ -293,7 +298,6 @@ body {
   &-card {
     position: relative;
     height: 50rem;
-    perspective: 150rem;
 
     &__side {
       position: absolute;
@@ -342,7 +346,7 @@ body {
 
     &__heading {
       position: absolute;
-      top: 12rem;
+      top: 9rem;
       right: 2rem;
       width: 70%;
       font-family: "LatoLight", sans-serif;
@@ -350,7 +354,6 @@ body {
       font-weight: normal;
       color: #ffffff;
       text-align: right;
-      text-transform: uppercase;
     }
 
     &__heading-span {
@@ -366,14 +369,16 @@ body {
       ul {
         width: 80%;
         margin: auto;
+        padding: 0;
         list-style: none;
+
         li {
           padding: 1rem;
           font-size: 1.5rem;
           text-align: center;
 
           &:not(:last-child) {
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid #dfdfdf;
           }
 
         }
@@ -384,4 +389,13 @@ body {
 
   }
 
+}
+
+.card__price {
+  @include absCenter;
+
+  &-value {
+    font-size: 3rem;
+    text-align: center;
+  }
 }
