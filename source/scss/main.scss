@@ -384,9 +384,10 @@ body {
   width: 75%;
   margin: 0 auto;
   box-shadow: 0 3rem 6rem rgba(#b95471, .3);
-  border-radius: 3px;
+  border-radius: 30px;
   padding: 6rem;
   &__shape {
+    position: relative;
     float: left;
     width: 15rem;
     height: 15rem;
@@ -398,4 +399,30 @@ body {
   h3 {
     margin-bottom: 1.5rem;
   }
+
+  &__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 1;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    transition: all .5s;
+  }
+
+  &:hover &__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &__img {
+    transition: all .5s;
+    transform: scale(1.4);
+  }
+
 }
