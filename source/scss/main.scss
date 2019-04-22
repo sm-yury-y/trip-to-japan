@@ -380,12 +380,19 @@ body {
   margin-bottom: 13rem;
 }
 
+.stories {
+  position: relative;
+}
+
 .story {
   width: 75%;
   margin: 0 auto;
-  box-shadow: 0 3rem 6rem rgba(#b95471, .3);
-  border-radius: 30px;
-  padding: 6rem;
+  box-shadow: 0 1.5rem 4rem rgba(#000000, .15);
+  border-radius: 60px;
+  border-top-left-radius: 0;
+  padding: 3rem;
+  margin-bottom: 4rem;
+  background-color: rgba(255, 255, 255, 0.438);
   &__shape {
     position: relative;
     float: left;
@@ -418,11 +425,28 @@ body {
   &:hover &__caption {
     opacity: 1;
     transform: translate(-50%, -50%);
+    color: var(--color-pink);
   }
 
   &:hover &__img {
     transition: all .5s;
-    transform: scale(1.4);
+    filter: blur(3px) brightness(120%);
   }
 
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .15;
+
+  &__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 }
