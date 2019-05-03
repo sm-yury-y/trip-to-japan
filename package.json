@@ -9,7 +9,7 @@
   "author": "Yuri Smolyaninov",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#v4.0.0-alpha.3",
     "gulp-autoprefixer": "^6.0.0",
